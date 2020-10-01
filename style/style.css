@@ -1,0 +1,113 @@
+:root {
+    --red: #e50914;
+    --black: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background: var(--black);
+    font-family: 'Arial', Times, serif;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px;
+}
+
+header .netflix-logo {
+    padding: 12px 0;
+    height: 4.5rem;
+}
+
+header nav a {
+    color: #a8a8a8;
+    padding: 12px;
+}
+
+header nav a:hover {
+    color: #ffffff;
+}
+
+main .movie-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)100%), url('../img/banner-bg.jpg');
+    background-size: cover;
+    height: 500px;
+}
+
+main .movie-banner .container {
+    width: 70%;
+    margin-left: 24px;
+}
+
+main .movie-banner .title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 36px;
+}
+
+main .movie-banner .description {
+    margin: 24px 0;
+}
+
+main .movie-banner button {
+    background-color: rgba(0, 0, 0, .5);;
+    color: #ffffff;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+main .movie-banner button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+.movies-carousel {
+    margin: 24px 0;
+}
+
+.movies-carousel .movie-box {
+    cursor: pointer;
+}
+
+/*media queries*/
+
+@media (max-width: 700px) {
+    header .container {
+        flex-direction: column;
+        margin-bottom: 12px;
+    }
+
+    main .movie-banner button {
+        width: 100%;
+        margin-bottom: 8px;;
+    }
+}
+
+@media (min-width: 1000px) {
+    main .movie-banner .title {
+        font-size: 54px;
+    }
+
+    main .movie-banner .description {
+        width: 50%;
+    }
+}
